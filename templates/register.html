@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thor Fitness | Registration</title>
+    <link rel="stylesheet" href="{% static 'registration.css' %}" />
+  </head>
+  <body>
+    <form action="/signup/" method="POST">
+      {% csrf_token %}
+      <div class="login-box2">
+        <div class="login-header">
+          <header>Register</header>
+          {% if error %}
+          <p>{{error}}</p>
+          {% endif %}
+        </div>
+        <div class="input-box">
+          <input
+            type="text"
+            class="input-field"
+            placeholder="Username"
+            autocomplete="off"
+            name="username"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <input
+            type="text"
+            class="input-field"
+            placeholder="Email"
+            autocomplete="off"
+            name="email"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <input
+            type="password"
+            class="input-field"
+            placeholder="Password"
+            autocomplete="off"
+            name="password"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <input
+            type="search"
+            class="input-field"
+            list="mylist"
+            placeholder="Select plan"
+            name="plan"
+          />
+          <datalist id="mylist">
+            <option value="1 month - 600"></option>
+            <option value="3 months - 2,499"></option>
+            <option value="6 months - 3,999"></option>
+            <option value="12 months - 7,499"></option>
+          </datalist>
+        </div>
+        {% comment %} <div class="input-box">
+          <input
+            type="search"
+            class="input-field"
+            list="mylist2"
+            placeholder="Sport"
+            name="sport"
+          />
+          <datalist id="mylist2">
+            <option value="Davanagere"></option>
+            <option value="Bangalore"></option>
+            <option value="Hospet"></option>
+          </datalist>
+        </div> {% endcomment %}
+
+        <div class="input-submit">
+          <button class="submit-btn" id="submit"></button>
+          <label for="submit">Sign Up</label>
+        </div>
+        <div class="sign-up-link">
+          <p>Have an account? <a href="/login">Login</a></p>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

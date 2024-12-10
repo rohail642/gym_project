@@ -1,0 +1,401 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thor Gym | Davanagere</title>
+  <link rel="stylesheet" href="{% static 'slider.css' %}" />
+  <link rel="stylesheet" href="{% static 'footer.css' %}" />
+  <link rel="stylesheet" href="{% static 'home.css' %}" />
+  <link rel="stylesheet" href="{% static 'contact.css' %}" />
+  <link rel="stylesheet" href="{% static 'trainer.css' %}" />
+  <link rel="stylesheet" href="{% static 'about.css' %}" />
+  <link rel="stylesheet" href="{% static 'membership.css' %}" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <!-- navbar starts -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="{%  static '/images/thor_fitness_image.jpg' %}" alt="logo" />
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <!-- <li><a href="#services">Services</a></li> -->
+        <li><a href="#plans">Membership Plans</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      {% comment %} <div class="cta">
+        <a href="{% url 'register' %}" class="btn">Join Now</a>
+      </div> {% endcomment %}
+      <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </nav>
+  </header>
+  <!-- navbar ends -->
+
+  <!--slider starts-->
+  <div class="slider" style="position: relative; width: 100%; height: 652px; overflow: hidden;">
+    <img src="{%  static '/images/gym-546138_1280.jpg' %}" alt="" style="position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    filter: blur(3px);
+                    transform: scale(1.1); /*woohoo*/
+                    z-index: -1;">
+
+    <!-- Text Content -->
+    <div style="position: absolute; 
+                    top: 45%; 
+                    left: 20%; 
+                    transform: translate(-50%, -50%); 
+                    color: white; 
+                    z-index: 1;">
+      <h1>Sweat.</h1>
+      <h1>Success.</h1>
+      <h1 style="color: grey;">Strength.</h1>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <a href="{% url 'register' %}" class="btn">
+        Join Now!
+      </a>
+    </div>
+  </div>
+
+
+  <!--slider ends-->
+
+  <!-- about section -->
+  <div class="scroller2" id="about">
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h2>Step Towards Success</h2>
+          <p>
+            <b>Thor Fitness </b> has empowered over 1,000 individuals to embrace healthier lifestyles
+            through tailored fitness programs, expert trainers, and state-of-the-art facilities. By
+            promoting physical and mental well-being, we’ve fostered a community of strength, resilience,
+            and camaraderie, inspiring the local society to prioritize health and achieve their fitness
+            goals.
+          </p>
+          <!-- <button class="cta-button">Learn More</button> -->
+        </div>
+        <div class="hero-image">
+          <video autoplay loop muted src="{%  static '/images/gym_video.mp4' %}"
+            ></video>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- about section end -->
+
+  <!-- gym owner info-->
+  <div class="scroller2" id="AboutUs">
+    <div class="heading">
+      <h2>The Man Behind! </h2>
+    </div>
+    <div class="abt-habib">
+      <p><b>Habib</b> is an exceptional gym trainer and owner who demonstrates a deep commitment to his clients'
+        health
+        and fitness goals. With his vast knowledge of exercise science and nutrition, he tailors personalized
+        workout routines that cater to individual needs and abilities. Habib's motivational spirit and hands-on
+        guidance create a supportive and energetic environment that keeps members inspired. His professionalism,
+        combined with his friendly and approachable demeanor, makes him not just a trainer but a mentor who
+        genuinely cares about the progress and well-being of everyone he works with.</p>
+    </div>
+    <div class="team-card-container">
+      <div class="team-card" style="border-radius: 25px">
+        <div class="team-card-content">
+          <img class="img" src="{%  static '/images/habib_pic.jpg' %}" alt="" />
+          <h6 >Habib</h6>
+          <p class="text" >Gym Owner/Trainer</p>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!--gym owner info end-->
+
+
+  <!--transformation starts-->
+  <div class="slider-body">
+    <h2>Crazy Transformations!</h2>
+    <h6>"Transfer yourself into the Thor you are."</h6>
+    <div class="slider1">
+
+      <div class="slide-track">
+
+        <div class="slide">
+          <img src="{%  static '/images/trans_1.jpg' %}" alt="">
+        </div>
+
+        <div class="slide">
+          <img src="{%  static '/images/trans_2.jpg' %}" alt="">
+        </div>
+
+        <div class="slide">
+          <img src="{%  static '/images/trans_3.jpg' %}" alt="">
+        </div>
+
+        <div class="slide">
+          <img src="{%  static '/images/trans_4.jpg' %}" alt="">
+        </div>
+
+        <div class="slide">
+          <img src="{%  static '/images/trans_5.jpg' %}" alt="">
+        </div>
+
+        <div class="slide">
+          <img src="{%  static '/images/trans_6.jpg' %}" alt="">
+        </div>
+
+        <div class="slide">
+          <img src="{%  static '/images/trans_7.jpg' %}" alt="">
+        </div>
+
+
+        <!-- double the same images -->
+
+
+        <div class="slide">
+          <img src="{%  static '/images/trans_1.jpg' %}" alt="">
+        </div>
+
+        <div class="slide">
+          <img src="{%  static '/images/trans_2.jpg' %}" alt="">
+        </div>
+
+        <div class="slide">
+          <img src="{%  static '/images/trans_3.jpg' %}" alt="">
+        </div>
+
+        <div class="slide">
+          <img src="{%  static '/images/trans_4.jpg' %}" alt="">
+        </div>
+
+        <div class="slide">
+          <img src="{%  static '/images/trans_5.jpg' %}" alt="">
+        </div>
+
+        <div class="slide">
+          <img src="{%  static '/images/trans_6.jpg' %}" alt="">
+        </div>
+
+        <div class="slide">
+          <img src="{%  static '/images/trans_7.jpg' %}" alt="">
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  <!--transformation ends -->
+
+
+
+  <!--membership details-->
+  <div class="scroller2" id="plans">
+
+    <div class="pricing-table">
+      <div class="details">
+        <h2>Our plans</h2>
+        <p>We would always recommend you to go with the plan that best suits your criteria.
+          Note that you must pay ₹1000 for basic membership.
+        </p>
+      </div>
+      <div class="grid">
+        <div class="box basic">
+          <div class="title">Basic</div>
+          <div class="price">
+            <b>₹ 600</b>
+            <span>per month</span>
+          </div>
+          <div class="features">
+            <div>General diet Consultation</div>
+            <div>General Guidance</div>
+            <!-- <div>2 users</div> -->
+          </div>
+          <!-- <div class="button">
+                    <button>Learn More</button>
+                </div> -->
+        </div>
+        <div class="box ninja">
+          <div class="title">Ninja</div>
+          <div class="price">
+            <b>₹ 2,499</b>
+            <span>3 months</span>
+          </div>
+          <div class="features">
+            <div>General diet Consultation</div>
+            <div>advanced Guidance</div>
+            <!-- <div>2 users</div> -->
+          </div>
+          <!-- <div class="button">
+                    <button>Learn More</button>
+                </div> -->
+        </div>
+
+        <div class="box gold">
+          <div class="title">Gold</div>
+          <div class="price">
+            <b>₹ 3,999</b>
+            <span>6 months</span>
+          </div>
+          <div class="features">
+            <div>Advanced Diet Consultation</div>
+            <div>Advanced Guidance</div>
+            <!-- <div>2 users</div> -->
+          </div>
+          <!-- <div class="button">
+                    <button>Learn More</button>
+                </div> -->
+        </div>
+
+        <div class="box professional">
+          <div class="title">Premium</div>
+          <div class="price">
+            <b>₹ 7,499</b>
+            <span>Annually</span>
+          </div>
+          <div class="features">
+            <div>Advanced Diet Consultation</div>
+            <div>Advanced Guidance</div>
+          </div>
+          <!-- <div class="button">
+                    <button>Learn More</button>
+                </div> -->
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <!--membership details end-->
+
+  <!-- contact us -->
+  <div class="scroller2" id="contact">
+
+    <section class="contact">
+      <div class="content">
+        <h2>Contact</h2>
+        <p>
+          We would love to hear from you and are always open for feedback. Let
+          us know your thoughts.
+        </p>
+      </div>
+      <div class="contact-container">
+        <div class="contactInfo">
+          <div class="box">
+            <div class="icon">
+              <!-- <i class="fa fa-map-marker" aria-hidden="true"></i> -->
+            </div>
+            <div class="text">
+              <h3>Address</h3>
+              <p>Patel Plaza, above apollo medicals, Kondajji Road<br />Davanagere, Karnataka,<br />577001</p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="icon">
+              <!-- <i class="fa fa-phone" aria-hidden="true"></i> -->
+            </div>
+            <div class="text">
+              <h3>Phone</h3>
+              <p>+91 89512-72049</p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="icon">
+              <!-- <i class="fa fa-envelope" aria-hidden="true"></i> -->
+            </div>
+            <div class="text">
+              <h3>Email</h3>
+              <p>Rohail230@gmail.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="contactForm">
+          <form>
+            <div class="msg">
+              <h2>Send Message</h2>
+            </div>
+            <div class="inputBox">
+              <input type="text" name="" required="required" />
+              <span>Full Name</span>
+            </div>
+            <div class="inputBox">
+              <input type="text" name="" required="required" />
+              <span>Email</span>
+            </div>
+            <div class="inputBox">
+              <textarea required="required"></textarea>
+              <span>Type Your Message...</span>
+            </div>
+            <div class="inputBox">
+              <input class="sendbutton" type="submit" name="" value="Send" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- contact us end -->
+
+  <!-- footer starts -->
+  <div class="scroller2">
+    <footer class="footer">
+      <div class="container4">
+        <div class="row">
+          <div class="footer-col">
+            <h4>Timings</h4>
+            <ul>
+              <li><a >Monday - Saturday 7am - 10:30pm</a></li>
+              <br>
+              <li><a >We stay closed on Sunday :(</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+              <a href="https://wa.me/918951272049"><i class="fab fa-whatsapp"></i></a>
+              <a href="https://www.instagram.com/thorfitnesscenter/"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="footer-content">
+        <p>&copy; <span id="currentYear"></span> Thor-Fitness. All Rights Reserved.</p>
+    </div>
+    </footer>
+  </div>
+
+  <!-- footer ends -->
+
+  <script src="{%  static 'home.js' %}"></script>
+  <script src="{%  static 'scroll.js' %}"></script>
+  <script src="{%  static 'burger.js' %}"></script>
+
+</body>
+
+</html>
