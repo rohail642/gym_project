@@ -1,0 +1,184 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.slider-body{
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: grey;
+}
+
+.slider1{
+    height: 250px;
+    margin-bottom: 100px;
+    position: relative;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+.slider-body h2{
+    margin-top: 20px;
+    font-size: 80px;
+    color: black;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+.slider-body h6{
+    color: black;
+    margin-top: -50px;
+    margin-bottom: 20px;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: 25px;
+    font-style: normal;
+}
+.slide-track{
+    display: flex;
+    width: calc(250px * 14);
+    animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-250px * 7));
+    }
+}
+
+.slide{
+    height: 250px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.slide img{
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.slide img:hover{
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px black;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+    .slider-body h2 {
+        font-size: 60px; /* Smaller heading size */
+    }
+
+    .slider-body h6 {
+        font-size: 22px; /* Adjust text size for smaller screens */
+    }
+
+    .slide {
+        width: 200px; /* Smaller width for the slides */
+        height: 200px; /* Adjust slide height */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .slide img {
+        margin-bottom: 15px; /* Less margin */
+    }
+
+    .slide-track {
+        width: calc(200px * 14); /* Adjust track width */
+    }
+}
+
+/* For Mobile Devices */
+@media (max-width: 768px) {
+    .slider-body h2 {
+        font-size: 40px; /* Smaller heading for mobile */
+    }
+
+    .slider-body h6 {
+        font-size: 18px; /* Smaller subheading */
+    }
+
+    .slide {
+        width: 150px; /* Even smaller slide width */
+        height: 150px; /* Smaller height */
+        padding: 8px; /* Reduced padding */
+    }
+
+    .slide img {
+        margin-bottom: 10px; /* Even smaller margin */
+    }
+
+    .slide-track {
+        width: calc(150px * 14); /* Adjust track width for mobile */
+    }
+}
+
+/* For Small Mobile Devices */
+@media (max-width: 480px) {
+    .slider-body{
+        margin-bottom: -200px;
+
+    }
+    .slider-body h2 {
+        width: 400px;
+        font-size: 55px; /* Small heading on very small devices */
+        margin-top: -30px;
+        
+    }
+
+    .slider-body h6 {
+        margin-top: -300px;
+        font-size: 16px; /* Further reduce subheading font size */
+    }
+    
+    .slider1{
+        margin-top: -400px;
+    }
+
+    .slide {
+        width: 120px; /* Tiny slides on very small screens */
+        height: 120px;
+        padding: 5px;
+    }
+
+    .slide img {
+        margin-bottom: 5px; /* Tighten image margins */
+    }
+
+    .slide-track {
+        width: calc(120px * 14); /* Adjust track width accordingly */
+    }
+}
+
+/* For Extra Small Mobile Devices (Optional) */
+@media (max-width: 375px) {
+    .slider-body h2 {
+        font-size: 28px; /* Tiny heading */
+    }
+
+    .slider-body h6 {
+        font-size: 14px; /* Minimized subheading */
+    }
+
+    .slide {
+        width: 100px; /* Ultra small slide width */
+        height: 100px;
+        padding: 5px;
+    }
+
+    .slide img {
+        margin-bottom: 5px; /* Adjust image margin */
+    }
+
+    .slide-track {
+        width: calc(100px * 14); /* Adjust track width for smallest screens */
+    }
+}
